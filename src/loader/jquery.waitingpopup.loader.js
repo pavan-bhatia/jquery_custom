@@ -35,6 +35,10 @@ function showPopupOnBeforeUnloadEvent() {
 	$().waitingpopup('open');
 }
 
+function bindBeforeunload(){
+	$(window).bind('beforeunload', showPopupOnBeforeUnloadEvent);	
+}
+
 function attachIframeEvent() {
 	$('iframe').load(function() {
 		if (--loaderCount == 0) {
